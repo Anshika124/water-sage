@@ -23,7 +23,7 @@ function Navigation() {
           alt="Logo"
           style={{ height: '40px', width: 'auto' }}
         /> */}
-        <span>Water Sage</span>
+        <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}><span>Water Sage</span></Link>
       </div>
 
       {/* Links on the right */}
@@ -36,14 +36,14 @@ function Navigation() {
           padding: 0,
         }}>
           <li>
-            <a href="#techniques" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
+            <Link to="/techniques" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
               Techniques
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#login" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
+            <Link to="/login" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
               Login
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
