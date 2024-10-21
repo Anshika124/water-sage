@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 function Home() {
 
   return (
-    <div>
+    <div style={{paddingTop:'70px'}}>
+    Welcome to home page
     
     </div>
   )
