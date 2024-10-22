@@ -1,21 +1,25 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Navigation() {
+  let local = JSON.parse(localStorage.getItem("userId"));
+  console.log(local)
   return (
-    <header style={{
-      backgroundColor: '#248DC5',  // Blue background
-      padding: '10px 20px',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      height: '60px',
-      color: 'white',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    }}>
+    <header
+      style={{
+        backgroundColor: "#248DC5", // Blue background
+        padding: "10px 20px",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        height: "60px",
+        color: "white",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
       {/* Logo on the left */}
       <div>
         {/* <img
@@ -23,32 +27,67 @@ function Navigation() {
           alt="Logo"
           style={{ height: '40px', width: 'auto' }}
         /> */}
-        <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}><span>Water Sage</span></Link>
+        <Link
+          to="/"
+          style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}
+        >
+          <span>Water Sage</span>
+        </Link>
       </div>
 
       {/* Links on the right */}
       <nav>
-        <ul style={{
-          display: 'flex',
-          gap: '20px',
-          listStyle: 'none',
-          margin: 0,
-          padding: 0,
-        }}>
+        <ul
+          style={{
+            display: "flex",
+            gap: "20px",
+            listStyle: "none",
+            margin: 0,
+            padding: 0,
+          }}
+        >
           <li>
-            <Link to="/techniques" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
+            <Link
+              to="/techniques"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
               Techniques
             </Link>
           </li>
           <li>
-            <Link to="/login" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
-              Login
-            </Link>
+            {!local ? (
+              <Link
+                to="/login"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+                Login
+              </Link>
+            ) : (
+              <Link
+                to={`/profile/${local}`}
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+
+                Profile
+              </Link>
+            )}
           </li>
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

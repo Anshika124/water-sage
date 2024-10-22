@@ -12,6 +12,7 @@ import LeaderBoard from './pages/LeaderBoard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import Map from './pages/Map';
 
 function App() {
 
@@ -32,9 +33,10 @@ function App() {
           <Route path='/techniques' element={<Techniques/>} />
           <Route path='/issues' element={<Issues/>} />
           <Route path='/globalmap' element={<GlobalMap/>} />
+          <Route path='/map' element={<Map/>} />
           <Route path='/awareness' element={<Awareness/>} />
           <Route path='/leaderboard' element={<LeaderBoard />} />
-          <Route path='/profile' element={<Profile />} />
+          <Route path='/profile/:userId' element={<Profile />} />
 
         </Routes>
       </Router>
