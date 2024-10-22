@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
 import './App.css';
 import '@picocss/pico/css/pico.min.css';
 import Techniques from './pages/Techniques';
@@ -12,6 +11,7 @@ import LeaderBoard from './pages/LeaderBoard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import Home from './pages/Home';
 
 function App() {
 

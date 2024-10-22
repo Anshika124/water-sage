@@ -1,0 +1,98 @@
+.home-page {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .half-page {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Scroll if content exceeds view height */
+  }
+  
+  /* Style for FAQ section */
+  .faq {
+    background-color: #f0f8ff; /* Light blue for FAQ section */
+    padding: 20px;
+  }
+  
+  /* Style for Info section */
+  .info {
+    background-color: #f5f5f5; /* Light gray for info section */
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #0077b6; /* Primary color for headings */
+    font-size: 24px; /* Increase font size */
+    margin-bottom: 10px; /* Add space below heading */
+  }
+  
+  h3 {
+    color: #023e8a; /* Secondary color for subheadings */
+    font-size: 20px;
+    margin-top: 15px; /* Add space above subheadings */
+    margin-bottom: 8px; /* Space below subheadings */
+  }
+  
+  p, ul {
+    color: #333; /* Dark text for readability */
+    line-height: 1.6; /* Better line spacing */
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Add padding at the top to make sure headings aren't hidden behind navbars */
+  body {
+    padding-top: 60px; /* Adjust according to navbar height */
+  }
+  
+  .faq-section {
+    background-color: #f0f8ff;
+    padding: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    background-color: #e0f4ff; /* Slight hover effect */
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-question h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0077b6;
+  }
+  
+  .faq-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-arrow.open {
+    transform: rotate(180deg); /* Rotate the arrow when open */
+  }
+  
+  .faq-answer {
+    padding: 10px 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    border-top: 1px solid #0077b6;
+    margin-top: 10px;
+  }
