@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   let local = JSON.parse(localStorage.getItem("userId"));
-  console.log(local)
+  
   return (
     <header
       style={{
@@ -18,15 +18,10 @@ function Navigation() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        zIndex: 1000, // Higher than the content on the page
       }}
     >
-      {/* Logo on the left */}
       <div>
-        {/* <img
-          src="logo.png"
-          alt="Logo"
-          style={{ height: '40px', width: 'auto' }}
-        /> */}
         <Link
           to="/"
           style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}
@@ -35,7 +30,6 @@ function Navigation() {
         </Link>
       </div>
 
-      {/* Links on the right */}
       <nav>
         <ul
           style={{
@@ -79,7 +73,6 @@ function Navigation() {
                   fontWeight: "bold",
                 }}
               >
-
                 Profile
               </Link>
             )}

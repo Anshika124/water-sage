@@ -1,5 +1,69 @@
 import React, { useState } from 'react';
 import '../styles/Home.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const CardSlider = () => {
+  const settings = {
+    dots: true,        
+    infinite: true,    
+    speed: 500,        
+    slidesToShow: 3,   
+    slidesToScroll: 1, 
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div style={{ width: "80%", margin: "auto" }}>
+      <Slider {...settings}>
+        <div>
+          <div className="card">
+            <h3>Card 1</h3>
+            <p>Some content</p>
+          </div>
+        </div>
+        <div>
+          <div className="card">
+            <h3>Card 2</h3>
+            <p>Some content</p>
+          </div>
+        </div>
+        <div>
+          <div className="card">
+            <h3>Card 3</h3>
+            <p>Some content</p>
+          </div>
+        </div>
+        <div>
+          <div className="card">
+            <h3>Card 4</h3>
+            <p>Some content</p>
+          </div>
+        </div>
+        <div>
+          <div className="card">
+            <h3>Card 5</h3>
+            <p>Some content</p>
+          </div>
+        </div>
+      </Slider>
+    </div>
+  );
+};
 
 // Single FAQ Component
 const FAQItem = ({ question, answer }) => {
@@ -104,14 +168,17 @@ const InfoSection = () => {
 // HomePage Component
 const Home = () => {
   return (
-    <div className="home-page">
-      <div className="half-page faq">
-        <FAQ />
-      </div>
-      <div className="half-page info">
-        <InfoSection />
-      </div>
-    </div>
+    <><div>
+      <CardSlider /><br /><br />
+    </div><div className="home-page">
+
+        <div className="half-page faq">
+          <FAQ />
+        </div>
+        <div className="half-page info">
+          <InfoSection />
+        </div>
+      </div></>
   );
 };
 
