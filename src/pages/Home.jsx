@@ -4,10 +4,18 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
+import image1 from '../assets/2.jpg'
+import image2 from '../assets/2.jpg'
+import image3 from '../assets/2.jpg'
+import image4 from '../assets/2.jpg'
+import image5 from '../assets/2.jpg'
+import map from '../assets/map.png'
 
 const GlobalMap= () => {
   return(
-    <Link to="/globalmap" className="global-map-link">Global Map</Link>
+    <Link to="/globalmap" className="global-map-link">
+      <img src={map} alt="Announcements" className="map-image" />
+    </Link>
   );
 }
 
@@ -39,36 +47,41 @@ const CardSlider = () => {
       <Slider {...settings}>
         <div>
           <div className="card">
-            <Link to="/announcementsSchemes">
-              <img src="/images/announcements.jpg" alt="Announcements" className="card-image" />
+            <Link to="/announcementsschemes">
+              <h3 className="card-title">Announcements</h3>
+              <img src={image1} alt="Announcements" className="card-image" />
             </Link>
           </div>
         </div>
         <div>
           <div className="card">
             <Link to="/techniques">
-              <img src="/images/techniques.jpg" alt="Techniques" className="card-image" />
+              <h3 className="card-title">Techniques</h3>
+              <img src={image1} alt="Techniques" className="card-image" />
             </Link>
           </div>
         </div>
         <div>
           <div className="card">
             <Link to="/issues">
-              <img src="/images/issues.jpg" alt="Issues" className="card-image" />
+              <h3 className="card-title">Issues</h3>
+              <img src={image3} alt="Issues" className="card-image" />
             </Link>
           </div>
         </div>
         <div>
           <div className="card">
             <Link to="/factoftheday">
-              <img src="/images/fact.jpg" alt="Fact Of The Day" className="card-image" />
+              <h3 className="card-title">Fact Of The Day</h3>
+              <img src={image4} alt="Fact Of The Day" className="card-image" />
             </Link>
           </div>
         </div>
         <div>
           <div className="card">
             <Link to="/upcomingevents">
-              <img src="/images/upcoming.jpg" alt="Upcoming Events" className="card-image" />
+              <h3 className="card-title">Upcoming Events</h3>
+              <img src={image5} alt="Upcoming Events" className="card-image" />
             </Link>
           </div>
         </div>

@@ -107,6 +107,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     transition: transform 0.3s ease;
+    width: 400px;
   }
     
 .card:hover {
@@ -114,11 +115,15 @@
   }
     
 .card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
   margin-bottom: 10px;
-} 
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 10px;
+  max-height: 400px;
+  max-width: 400px; 
+}
+  
 
 .slick-prev::before,
 .slick-next::before {
@@ -147,4 +152,22 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.map-image {
+  width: 1200px;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.map-image:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.card-title {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #0077b6; /* Use the primary color for consistency */
+  margin-bottom: 10px; /* Add space below the title */
+  text-align: center; /* Center align the text */
+  font-weight: bold; /* Make the title bold */
 }

@@ -6,4 +6,4 @@ function AnnouncementsSchemes() {
   )
 }
 
-export default AnnouncementsSchemes
+export default AnnouncementsSchemes;
