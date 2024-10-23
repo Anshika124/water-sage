@@ -9,6 +9,7 @@ import Navigation from './components/Navigation';
 import Awareness from './pages/Awareness';
 import LeaderBoard from './pages/LeaderBoard';
 import Login from './pages/Login';
+import Quiz from './pages/Quiz';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Home from './pages/Home';
@@ -37,6 +38,7 @@ function App() {
           <Route path='/globalmap' element={<GlobalMap/>} />
           <Route path='/map' element={<Map/>} />
           <Route path='/awareness' element={<Awareness/>} />
+          <Route path='/quiz' element={<Quiz/>} />
           <Route path='/leaderboard' element={<LeaderBoard />} />
           <Route path='/profile/:userId' element={<Profile />} />
           <Route path='/Factoftheday' element={<Factoftheday />} />

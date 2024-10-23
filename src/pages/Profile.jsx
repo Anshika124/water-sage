@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import userPic from '../assets/user.png'
 
 function Profile() {
@@ -9,6 +9,12 @@ function Profile() {
   const [error, setError] = useState(null);
 
   const { userId } = useParams();
+
+  const navigate = useNavigate();
+
+  const navigateQuiz = () => {
+    navigate('/quiz');
+  }
 
   useEffect(() => {
     // Fetch user data from backend
@@ -39,8 +45,9 @@ function Profile() {
         <p>@{user.username}</p>
         <p>{user.bio || 'No bio available'}</p>
         <p>Score: {user.score}</p>
-        <button>Edit Profile</button>
-        <button>Sign out</button>
+        <button className='outline' onClick={navigateQuiz}>Take a Quiz</button>
+        <button className='outline contrast'>Edit Profile</button>
+        <button >Sign out</button>
       </div>
 
       <div style={mainContentStyle}>
