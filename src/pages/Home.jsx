@@ -13,9 +13,11 @@ import map from '../assets/map.png'
 
 const GlobalMap= () => {
   return(
-    <Link to="/globalmap" className="global-map-link">
+    <div  className="map-container">
+      <Link to="/globalmap" className="global-map-link">
       <img src={map} alt="Announcements" className="map-image" />
-    </Link>
+     </Link>
+    </div>
   );
 }
 
