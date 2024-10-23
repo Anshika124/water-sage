@@ -1,0 +1,46 @@
+.fact-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .fact-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .fact-image {
+    margin-bottom: 10px;
+  }
+  
+  .fact-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .fact-number {
+    font-size: 2rem;
+    color: #ddd;
+  }
+  
+  .fact-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .fact-arrow {
+    font-size: 2rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .fact-item img {
+    width: 100%; /* Make the image fit the container */
+    height: auto;
+    border-radius: 8px; /* Optional, for rounded corners */
+    margin-bottom: 10px;
+  }

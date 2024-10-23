@@ -13,6 +13,8 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Home from './pages/Home';
 import Map from './pages/Map';
+import Factoftheday from './pages/Factoftheday';
+
 
 function App() {
 
@@ -37,6 +39,7 @@ function App() {
           <Route path='/awareness' element={<Awareness/>} />
           <Route path='/leaderboard' element={<LeaderBoard />} />
           <Route path='/profile/:userId' element={<Profile />} />
+          <Route path='/Factoftheday' element={<Factoftheday />} />
 
         </Routes>
       </Router>
