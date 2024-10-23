@@ -104,7 +104,21 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: -50;
-  }  
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+    
+.card:hover {
+  transform: scale(1.05);
+  }
+    
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+} 
 
 .slick-prev::before,
 .slick-next::before {
@@ -113,4 +127,24 @@
 
 .slick-prev, .slick-next {
   font-size: 24px; 
+}
+
+.global-map-link {
+  display: inline-block;
+  font-size: 24px;
+  color: #248DC5;
+  position: relative;
+  opacity: 0;
+  animation: fadeInMove 2s ease-in-out forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

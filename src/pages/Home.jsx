@@ -3,14 +3,21 @@ import '../styles/Home.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
+
+const GlobalMap= () => {
+  return(
+    <Link to="/globalmap" className="global-map-link">Global Map</Link>
+  );
+}
 
 const CardSlider = () => {
   const settings = {
-    dots: true,        
-    infinite: true,    
-    speed: 500,        
-    slidesToShow: 3,   
-    slidesToScroll: 1, 
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -32,32 +39,37 @@ const CardSlider = () => {
       <Slider {...settings}>
         <div>
           <div className="card">
-            <h3>Card 1</h3>
-            <p>Some content</p>
+            <Link to="/announcementsSchemes">
+              <img src="/images/announcements.jpg" alt="Announcements" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 2</h3>
-            <p>Some content</p>
+            <Link to="/techniques">
+              <img src="/images/techniques.jpg" alt="Techniques" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 3</h3>
-            <p>Some content</p>
+            <Link to="/issues">
+              <img src="/images/issues.jpg" alt="Issues" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 4</h3>
-            <p>Some content</p>
+            <Link to="/factoftheday">
+              <img src="/images/fact.jpg" alt="Fact Of The Day" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 5</h3>
-            <p>Some content</p>
+            <Link to="/upcomingevents">
+              <img src="/images/upcoming.jpg" alt="Upcoming Events" className="card-image" />
+            </Link>
           </div>
         </div>
       </Slider>
@@ -168,7 +180,9 @@ const InfoSection = () => {
 // HomePage Component
 const Home = () => {
   return (
-    <><div>
+    <>
+    <div><GlobalMap/><br /><br /><br /></div>
+    <div>
       <CardSlider /><br /><br />
     </div><div className="home-page">
 
