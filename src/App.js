@@ -15,6 +15,7 @@ import Profile from './pages/Profile';
 import Home from './pages/Home';
 import Map from './pages/Map';
 import Factoftheday from './pages/Factoftheday';
+import AnnouncementsSchemes from './pages/AnnouncementsSchemes';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <Route path='/leaderboard' element={<LeaderBoard />} />
           <Route path='/profile/:userId' element={<Profile />} />
           <Route path='/Factoftheday' element={<Factoftheday />} />
-
+          <Route path='/AnnouncementsSchemes' element={<AnnouncementsSchemes/>} />
         </Routes>
       </Router>
     </>

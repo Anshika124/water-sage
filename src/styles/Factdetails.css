@@ -1,53 +1,72 @@
-.fact-details {
-    display: flex;
-    background-color: white;
-    width: 60%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .fact-image {
-    flex: 1;
-    background-color: #ddd;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #666;
-  }
-  
-  .fact-content {
-    flex: 2;
-    text-align: left;
-  }
-  
-  .fact-content h2 {
-    color: #333;
-  }
-  
-  .fact-content h3 {
-    color: #666;
-    font-size: 1.5rem;
-  }
-  
-  .fact-content p {
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  .fact-content button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #ff4b4b;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .fact-content button:hover {
-    background-color: #ff3333;
-  }
-  
+.fact-content-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fact-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.744); 
+  color: #fff; 
+  text-align: center;
+  padding: 20px;
+}
+
+.fact-content-overlay h2, 
+.fact-content-overlay h3, 
+.fact-content-overlay p {
+  margin: 5px 0;
+  font-weight: bold;
+ 
+}
+
+.download-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 12px; /* Smaller font size */
+  padding: 5px 10px; /* Small padding for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #388e3c;
+}
+
+.close-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  font-size: 14px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}

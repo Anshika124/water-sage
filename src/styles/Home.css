@@ -104,7 +104,26 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: -50;
-  }  
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    width: 400px;
+  }
+    
+.card:hover {
+  transform: scale(1.05);
+  }
+    
+.card-image {
+  margin-bottom: 10px;
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 10px;
+  max-height: 400px;
+  max-width: 400px; 
+}
+  
 
 .slick-prev::before,
 .slick-next::before {
@@ -113,4 +132,42 @@
 
 .slick-prev, .slick-next {
   font-size: 24px; 
+}
+
+.global-map-link {
+  display: inline-block;
+  font-size: 24px;
+  color: #248DC5;
+  position: relative;
+  opacity: 0;
+  animation: fadeInMove 2s ease-in-out forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.map-image {
+  width: 1200px;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.map-image:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.card-title {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #0077b6; /* Use the primary color for consistency */
+  margin-bottom: 10px; /* Add space below the title */
+  text-align: center; /* Center align the text */
+  font-weight: bold; /* Make the title bold */
 }

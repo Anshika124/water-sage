@@ -3,14 +3,29 @@ import '../styles/Home.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
+import image1 from '../assets/2.jpg'
+import image2 from '../assets/2.jpg'
+import image3 from '../assets/2.jpg'
+import image4 from '../assets/2.jpg'
+import image5 from '../assets/2.jpg'
+import map from '../assets/map.png'
+
+const GlobalMap= () => {
+  return(
+    <Link to="/globalmap" className="global-map-link">
+      <img src={map} alt="Announcements" className="map-image" />
+    </Link>
+  );
+}
 
 const CardSlider = () => {
   const settings = {
-    dots: true,        
-    infinite: true,    
-    speed: 500,        
-    slidesToShow: 3,   
-    slidesToScroll: 1, 
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -32,32 +47,42 @@ const CardSlider = () => {
       <Slider {...settings}>
         <div>
           <div className="card">
-            <h3>Card 1</h3>
-            <p>Some content</p>
+            <Link to="/announcementsschemes">
+              <h3 className="card-title">Announcements</h3>
+              <img src={image1} alt="Announcements" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 2</h3>
-            <p>Some content</p>
+            <Link to="/techniques">
+              <h3 className="card-title">Techniques</h3>
+              <img src={image1} alt="Techniques" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 3</h3>
-            <p>Some content</p>
+            <Link to="/issues">
+              <h3 className="card-title">Issues</h3>
+              <img src={image3} alt="Issues" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 4</h3>
-            <p>Some content</p>
+            <Link to="/factoftheday">
+              <h3 className="card-title">Fact Of The Day</h3>
+              <img src={image4} alt="Fact Of The Day" className="card-image" />
+            </Link>
           </div>
         </div>
         <div>
           <div className="card">
-            <h3>Card 5</h3>
-            <p>Some content</p>
+            <Link to="/upcomingevents">
+              <h3 className="card-title">Upcoming Events</h3>
+              <img src={image5} alt="Upcoming Events" className="card-image" />
+            </Link>
           </div>
         </div>
       </Slider>
@@ -168,7 +193,9 @@ const InfoSection = () => {
 // HomePage Component
 const Home = () => {
   return (
-    <><div>
+    <>
+    <div><GlobalMap/><br /><br /><br /></div>
+    <div>
       <CardSlider /><br /><br />
     </div><div className="home-page">
 
