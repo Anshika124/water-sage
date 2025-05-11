@@ -26,6 +26,13 @@ const issuesData = [
     description: 'Monsoon floods have caused widespread destruction and water contamination.',
     position: [10.8505, 76.2711], // Coordinates for Kerala
   },
+  {
+    id: 3,
+    title: 'new',
+    description: 'new ew.',
+    position: [26.327499389648438, 82.89501953125], // Coordinates for Kerala
+  },
+
 ];
 
 const MapWithPins = () => {
@@ -33,7 +40,7 @@ const MapWithPins = () => {
     <div style={mapPageStyle}>
       <h2 style={{ color: '#1E90FF', textAlign: 'center', margin: '20px' }}>Water Issues in India</h2>
       <MapContainer
-        center={[20.5937, 78.9629]} // Center of India
+        center={[20.5937, 77.9629]} // Center of India
         zoom={5}
         style={{ height: '500px', width: '100%', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}
       >
